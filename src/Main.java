@@ -28,6 +28,7 @@ public class Main {
                 "3. LinkedHashMap\n");
         Scanner sc = new Scanner(System.in);
         int numOp = sc.nextInt();
+        sc.nextLine();
         if(numOp == 1){
             typeSelected = "HashMap";
         }else if(numOp == 2){
@@ -68,41 +69,77 @@ public class Main {
         System.out.println(">> Seleccione la accion a realizar:\n" +
                 "1. Agregar una carta a su colección\n" +
                 "2. Mostrarel tipo de una carta específica.\n" +
-                "3. Mostrar el nombre,tipo y cantidad de una carta en su coleccion.\n" +
-                "4. Mostrarel nombre, tipo y cantidad de cada cartaque en su colección, ordenadas por tipo.\n" +
+                "3. Mostrar el nombre,tipo y cantidad de cada carta en su coleccion.\n" +
+                "4. Mostrarel nombre, tipo y cantidad de cada carta en su colección, ordenadas por tipo.\n" +
                 "5. Mostrar el nombre y tipo de todas las cartas existentes.\n" +
-                "6. Mostrar el nombre y tipo de todas las cartas existentes, ordenadas por tipo.\n");
-        
+                "6. Mostrar el nombre y tipo de todas las cartas existentes, ordenadas por tipo.\n" + 
+                "7. Salir");
+      
         int op = sc.nextInt();
+        sc.nextLine();
+        while (op != 7) { 
         if(op == 1){
             System.out.println("Ingresa el nombre de la carta que desea agregar");
             String carta = sc.nextLine();
+            String value = globalDeck.get(carta);
+            personalDeck.put(carta, value);
+            System.out.println("La carta " + carta + " de tipo " + value + " ha sido agregada a su coleccion");
       
         }
         
         else if(op == 2){
         	System.out.println("Ingresare el nombre de la carta");
         	String carta = sc.nextLine();
-            
+        	 String value = globalDeck.get(carta);
+        	 System.out.println("el tipo de la carta es " + value);
         }
         
         else if(op == 3){
-        	System.out.println("opcion 3");
+        	Iterator it = personalDeck.entrySet().iterator();
+        	
+        	while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                System.out.println(pair.getKey() + " = " + pair.getValue());
+        	}
         }
-        
         else if(op == 4){
         	System.out.println("opcion 4");
         	
         }
         
         else if(op == 5){
-        	System.out.println("opcion 5");
+        	Iterator it = globalDeck.entrySet().iterator();
+        	
+        	while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                System.out.println(pair.getKey() + " = " + pair.getValue());
+        	}
+        	
             
         }
         
         else if(op == 6){
         	System.out.println("opcion 6");
         }
+        
+        else if (op != 7){
+        	System.out.println("Opcion no reconocida");
+        }
+        
+        System.out.println(">> Seleccione la accion a realizar:\n" +
+                "1. Agregar una carta a su colección\n" +
+                "2. Mostrarel tipo de una carta específica.\n" +
+                "3. Mostrar el nombre,tipo y cantidad de cada carta en su coleccion.\n" +
+                "4. Mostrarel nombre, tipo y cantidad de cada carta en su colección, ordenadas por tipo.\n" +
+                "5. Mostrar el nombre y tipo de todas las cartas existentes.\n" +
+                "6. Mostrar el nombre y tipo de todas las cartas existentes, ordenadas por tipo.\n" + 
+                "7. Salir");
+      
+        op = sc.nextInt();
+        sc.nextLine();
+        
+        }
+        System.out.println("ADIOS");
         
         
     }
