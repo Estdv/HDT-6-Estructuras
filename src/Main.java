@@ -75,31 +75,31 @@ public class Main {
         
         int op = sc.nextInt();
         if(op == 1){
-            // opcion 1
+            System.out.println("opcion 1");
       
         }
         
         else if(op == 2){
-            // opcion 2
+        	System.out.println("opcion 2");
             
         }
         
         else if(op == 3){
-            // opcion 3
+        	System.out.println("opcion 3");
         }
         
         else if(op == 4){
-            // opcion 4
+        	System.out.println("opcion 4");
         	
         }
         
         else if(op == 5){
-            // opcion 5
+        	System.out.println("opcion 5");
             
         }
         
         else if(op == 6){
-            // opcion 6
+        	System.out.println("opcion 6");
         }
         
         
