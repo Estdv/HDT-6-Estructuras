@@ -7,6 +7,7 @@
  */
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String [] arg) {
@@ -66,6 +67,7 @@ public class Main {
                 e2.printStackTrace();
             }
         }
+        
         System.out.println(">> Seleccione la accion a realizar:\n" +
                 "1. Agregar una carta a su colección\n" +
                 "2. Mostrarel tipo de una carta específica.\n" +
@@ -103,7 +105,34 @@ public class Main {
         	}
         }
         else if(op == 4){
-        	System.out.println("opcion 4");
+  
+        	Iterator it = personalDeck.entrySet().iterator();
+        	Iterator it1 = personalDeck.entrySet().iterator();
+        	Iterator it2 = personalDeck.entrySet().iterator();
+        	
+        	while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                String a = (String) pair.getValue();
+                if (a.equals("Monstruo")) {
+                	System.out.println(pair.getKey() + " = " + pair.getValue());
+                	}
+                }
+        	
+        	while (it1.hasNext()) {
+                Map.Entry pair = (Map.Entry)it1.next();
+                String b = (String) pair.getValue();
+                if (b.equals("Hechizo")) {
+                	System.out.println(pair.getKey() + " = " + pair.getValue());
+                	}
+                }
+        	
+        	while (it2.hasNext()) {
+                Map.Entry pair = (Map.Entry)it2.next();
+                String c = (String) pair.getValue();
+                if (c.equals("Trampa")) {
+                	System.out.println(pair.getKey() + " = " + pair.getValue());
+                	}
+                }
         	
         }
         
@@ -113,13 +142,42 @@ public class Main {
         	while (it.hasNext()) {
                 Map.Entry pair = (Map.Entry)it.next();
                 System.out.println(pair.getKey() + " = " + pair.getValue());
+
         	}
         	
             
         }
         
         else if(op == 6){
-        	System.out.println("opcion 6");
+        	Iterator it = globalDeck.entrySet().iterator();
+        	Iterator it1 = globalDeck.entrySet().iterator();
+        	Iterator it2 = globalDeck.entrySet().iterator();
+        	
+        	while (it.hasNext()) {
+                Map.Entry pair = (Map.Entry)it.next();
+                String a = (String) pair.getValue();
+                if (a.equals("Monstruo")) {
+                	System.out.println(pair.getKey() + " = " + pair.getValue());
+                	}
+                }
+        	
+        	while (it1.hasNext()) {
+                Map.Entry pair = (Map.Entry)it1.next();
+                String b = (String) pair.getValue();
+                if (b.equals("Hechizo")) {
+                	System.out.println(pair.getKey() + " = " + pair.getValue());
+                	}
+                }
+        	
+        	while (it2.hasNext()) {
+                Map.Entry pair = (Map.Entry)it2.next();
+                String c = (String) pair.getValue();
+                if (c.equals("Trampa")) {
+                	System.out.println(pair.getKey() + " = " + pair.getValue());
+                	}
+                }
+        	
+  
         }
         
         else if (op != 7){
