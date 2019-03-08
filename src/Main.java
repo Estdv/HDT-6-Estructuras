@@ -1,8 +1,5 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.*
+import java.util.*
 
 public class Main {
     public static void main(String [] arg) {
