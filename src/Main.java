@@ -1,5 +1,12 @@
-import java.io.*
-import java.util.*
+/*UVG
+ * Estructuras de datos
+ * Autores:
+ *Diego Estrada 18540
+ *Esteban del Valle 18221
+ *Main
+ */
+import java.io.*;
+import java.util.*;
 
 public class Main {
     public static void main(String [] arg) {
@@ -47,7 +54,9 @@ public class Main {
         }
         catch(Exception e){
             e.printStackTrace();
-        }finally{
+        }
+        
+        finally{
             try{
                 if( null != fr ){
                     fr.close();
@@ -56,5 +65,43 @@ public class Main {
                 e2.printStackTrace();
             }
         }
+        System.out.println(">> Seleccione la accion a realizar:\n" +
+                "1. Agregar una carta a su colección\n" +
+                "2. Mostrarel tipo de una carta específica.\n" +
+                "3. Mostrar el nombre,tipo y cantidad de una carta en su coleccion.\n" +
+                "4. Mostrarel nombre, tipo y cantidad de cada cartaque en su colección, ordenadas por tipo.\n" +
+                "5. Mostrar el nombre y tipo de todas las cartas existentes.\n" +
+                "6. Mostrar el nombre y tipo de todas las cartas existentes, ordenadas por tipo.\n");
+        
+        int op = sc.nextInt();
+        if(op == 1){
+            // opcion 1
+      
+        }
+        
+        else if(op == 2){
+            // opcion 2
+            
+        }
+        
+        else if(op == 3){
+            // opcion 3
+        }
+        
+        else if(op == 4){
+            // opcion 4
+        	
+        }
+        
+        else if(op == 5){
+            // opcion 5
+            
+        }
+        
+        else if(op == 6){
+            // opcion 6
+        }
+        
+        
     }
 }
