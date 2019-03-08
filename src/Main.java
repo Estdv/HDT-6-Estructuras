@@ -75,12 +75,14 @@ public class Main {
         
         int op = sc.nextInt();
         if(op == 1){
-            System.out.println("opcion 1");
+            System.out.println("Ingresa el nombre de la carta que desea agregar");
+            String carta = sc.nextLine();
       
         }
         
         else if(op == 2){
-        	System.out.println("opcion 2");
+        	System.out.println("Ingresare el nombre de la carta");
+        	String carta = sc.nextLine();
             
         }
         
